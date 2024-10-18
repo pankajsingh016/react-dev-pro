@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./customReact.js" defer></script>
+</head>
+<body>
+        <div id="root"></div>
+        
+</body>
+</html>
+
+<!-- 
+function createRender(element,container){
+
+    const tag = document.createElement(element.type);
+    tag.innerHTML = element.text;
+    for(const prop in element.props){
+        // console.log(prop);
+        tag.setAttribute(prop,element.props[prop]);
+    }
+    container.appendChild(tag)
+
+}
+
+const reactElement = {
+    type:'a',
+    props:{
+        href:"https://google.com",
+        target:'_blank'
+    },
+    text:'click me'
+}
+
+const container = document.querySelector('#root');
+
+createRender(reactElement, container);
+ -->
