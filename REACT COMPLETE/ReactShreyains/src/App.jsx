@@ -3,6 +3,12 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Card from "./components/Card";
 import axios from "axios";
+import {Routes,Route} from 'react-router-dom';
+import About from './Pages/About';
+import Contact from './Pages/Contact';
+import Home from './Pages/Home';
+import Services from "./Pages/Services";
+
 
 export const App = () => {
 
@@ -15,7 +21,19 @@ export const App = () => {
   }
 
   return (
-    <div className="p-10">
+    <>
+    <Navbar></Navbar>
+    <Routes>
+      <Route path="/" element={<Home/>}></Route>
+      <Route path='/about' element={<About/>}></Route>
+      <Route path='/contact' element={<Contact/>}></Route>
+      <Route path='/home' element={<Home/>}></Route>
+      <Route path='/services' element={<Services/>}></Route>
+    </Routes>
+
+
+    {/* <div className="p-10">
+      <Navbar></Navbar>
       <button onClick={getData} className="bg-teal-300 text-white font-semibold px-3 py-3 rounded-xl active:scale-90">
         Get Data
       </button>
@@ -28,10 +46,11 @@ export const App = () => {
             </div>
           })
         }
-        {/* <img src={data.download_url} alt="" /> */}
       </div>
-    </div>
+    </div> */}
+    </>
   );
 };
+
 
 export default App;
